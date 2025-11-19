@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --card: #0f1733;
+  --muted: #7f8ea3;
+  --text: #e8eef7;
+}
+
+html, body, #__next { height: 100%; }
+
+body {
+  background: radial-gradient(1000px 600px at 10% -10%, #20305c33, transparent),
+              radial-gradient(800px 500px at 110% -20%, #20305c33, transparent),
+              var(--bg);
+  color: var(--text);
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.card {
+  background: linear-gradient(180deg, #14214a, #0f1733);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 10px 30px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.06);
+  @apply rounded-2xl;
+}
+
+.label {
+  @apply text-sm font-medium text-ink-200;
+}
+
+.input {
+  @apply w-full bg-transparent border border-ink-700 rounded-xl px-3 py-2 text-ink-100 placeholder-ink-400 focus:outline-none focus:ring-2 focus:ring-ink-500;
+}
+
+.textarea {
+  @apply w-full bg-transparent border border-ink-700 rounded-xl px-3 py-2 text-ink-100 placeholder-ink-400 focus:outline-none focus:ring-2 focus:ring-ink-500 min-h-[120px];
+}
+
+.button {
+  @apply inline-flex items-center gap-2 rounded-xl border border-ink-700 bg-ink-800 hover:bg-ink-700 text-ink-100 px-4 py-2 transition;
+}
+
+.button-primary {
+  @apply inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 transition;
+}
